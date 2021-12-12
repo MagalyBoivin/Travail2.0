@@ -1,0 +1,283 @@
+body{
+	padding: 0;
+	margin:0;
+	font-size: larger;
+	color: white;
+}
+
+
+
+.menuContainer li {
+	float: right; 
+	display:inline;
+	cursor:pointer; 
+	list-style:none; 
+	position:relative;
+	background-color:white;
+    border-radius: 8px;
+}
+
+.menuContainer .sub li { 
+    margin: auto;
+    border-radius: 8px;  
+	background:#fff;
+}			
+.musicImage{
+    background-image: url(../images/background.jpg);
+    background-size:cover;
+	background-repeat: no-repeat;
+	background-color: rgb(171, 152, 120);
+}
+/* If the screen is smaller than 992px, do this:*/
+@media screen and (max-width: 600px) { /*SMALL SCREEN*/
+	/*Navigation bar*/
+	.bigScreen{
+		display: none;
+	}
+	.smallScreen{
+		display: block;
+	}
+	.smallNav ul li a{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+	}
+	.smallNav > li a{
+		width: 100%;
+		display: block;
+	}
+	.smallNav > li{
+		text-align: center;
+	}
+	.smallScreen{
+		background-color: wheat;
+	}
+	.main{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.main div{
+		padding: 10px;
+	}
+	iframe{
+		width: 100%;
+		min-height: 200px;
+	}
+	.main{
+		font-weight:lighter;
+		
+	}
+	.about{
+		display: none;
+	}
+
+	
+}
+@media screen and  (min-width:600px){ /*BIG SCREEN*/
+	.smallScreen{
+		display: none;
+	}
+	.bigScreen{
+		display: block;
+	}
+	.main{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		color: rgb(255, 255, 255);
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.iframeContainer{
+		position: relative;
+		width: 100%;
+    	overflow: hidden;
+		padding-bottom: 20px;
+		height: 200px;
+	}
+	.stretch{
+		grid-column: 1/3;
+	}
+	.responsive-iframe{
+		position: absolute;
+  		top: 0;
+  		left: 0;
+ 		bottom: 0;
+ 		right: 0;
+  		width: 50%;
+		display: block;
+		align-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		min-height: 200px;
+	}
+	.about{
+		display: block;
+		background-color: burlywood;
+		border-radius: 50px;
+		padding-right: 10px;
+		padding-left: 10px;
+		font-family: 'Smooch', cursive;
+		font-size: xx-large;
+		margin-left: auto;
+		margin-right: auto;
+		grid-column: 1/3;
+		max-height: 75px;
+		margin-bottom: 20px;
+	
+	}
+}
+/*Navigation bar*/
+.bigNav{
+	overflow: hidden;
+	font-weight:900;
+	background-color: wheat;
+	
+}
+.bigNav .sub li{
+	margin:0; padding: 0;;
+}
+.bigNav a {
+	display: block;
+	color: rgb(46, 38, 38);
+	text-align: center;
+	padding: 10px 10px;
+	text-decoration: none;
+	list-style: none;
+}
+.smallNav a{
+	text-decoration: none;
+}
+.bigNav > ul li a{
+	display: block;
+	width: inherit;
+	height: inherit;
+}
+.bigNav > li{
+	display: inline;
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 10px;
+	float:left;
+	
+}
+.smallNav li{
+	list-style: none;
+	padding: 10px;
+}
+.bigNav > li:hover{
+	color: white;
+}
+ul.sub {
+    display: none;
+	list-style: none;
+}
+.bigNav > li:hover .sub {
+    display: block;
+	
+
+}
+.tableauSongs li{
+	float: none;
+	padding-bottom: 5px;
+}
+
+.photoArtiste{
+	width: 200px; 
+    height: 200px; 
+    background-image: url(../images/Roxane_Bruneau.jpg);
+    /*background-size: contain;*/
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border-radius: 100px;
+    display: table-cell;
+}
+.photo2{
+	width: 200px; 
+    height: 200px; 
+    background-image: url(../images/roxane2.png);
+    background-repeat: no-repeat;
+    background-position: middle;
+    background-size: cover;
+    border-radius: 200px;
+    display: table-cell;
+	
+}
+.title1{
+	font-family: 'Corinthia', cursive;
+	font-size: xx-large;
+	margin-left: auto;
+	margin-right: auto;
+}
+.title2{
+	font-family: 'Smooch', cursive;
+	font-size: xx-large;
+	margin-left: auto;
+	margin-right: auto;
+}
+.disclamer{
+	grid-column: 1/3;
+	margin-top: 50px;
+	
+}
+
+.backcolor{
+	background-color: burlywood;
+	border-radius: 50px;
+	margin-left: -10px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+.subTitle{
+	font-family: 'Satisfy', cursive;
+	font-size: xx-large;
+	max-height: 50px;
+	max-width: fit-content;
+	
+}
+.concertImage{
+	width: 400px; 
+    height: 200px;
+    background-image: url(../images/concert.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: table-cell;
+}
+.dysphorieImage{
+	background-image: url(../images/dysphorie.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table-cell;
+	width: 300px; 
+    height: 300px;
+	border: 5px solid rgb(202, 192, 144);
+}
+.acrophobieImage{
+	background-image: url(../images/acrophobie.jfif);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table-cell;
+	width: 300px; 
+    height: 300px;
+	border: 5px solid rgb(202, 192, 144);
+}
+a{
+	color: rgb(253, 253, 253);
+
+}
+a:hover{
+	color: rgb(135, 78, 209);
+	text-decoration: none;
+}
+td{
+	max-width: 50px;
+}
+.icon{
+	width: 40px;
+}
